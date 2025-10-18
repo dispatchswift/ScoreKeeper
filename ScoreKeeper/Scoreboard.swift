@@ -17,7 +17,9 @@ struct Scoreboard {
         Player(name: "Jasmine", score: 0)
     ]
     
-    mutating func resetScore(to newValue: Int) {
-        
+    mutating func resetScores(to newValue: Int) {
+        for index in 0..<players.count {
+            players[index].score = newValue
+        }
     }
 }
